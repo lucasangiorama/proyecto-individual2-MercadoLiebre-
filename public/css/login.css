@@ -27,7 +27,7 @@ header{
     flex-grow: 1;
 }
 #search{
-    width: 20vw;
+    width: 15vw;
     height: 5vh;
     border-color: transparent;
     margin-left: 20%;
@@ -98,107 +98,43 @@ header{
     border-bottom-left-radius: 7px;
     border-color: transparent;
 }
-#banner{
-    width: 100%;
-}
-
 
 /* MAIN */
 
 
 main{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
     background-color: #dee1e4;
-    height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
-.subtitulos{
-    text-align: left;
-    margin: 3%;
+#titulo-cuenta{
+    text-align: center;
+    margin: 0%;
+    padding-top: 2%;
 }
-#ultimas-vistas{
-    display: flex;
-    flex-direction: row;
-    margin-right: 7%;
-    margin-left: 7%;
-    margin-top: 5%;
-    justify-content: space-around;
-    height: 50vh;
-}
-.caja-producto{
-    display: flex;
-    flex-direction: column; 
-}
-.caja-producto-cambio{
+#ingresar{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-.foto-producto{
-    width: 20vw;
-    margin-bottom: 0.5%;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
+#titulo-contraseña{
+    margin: 0%;
+    margin-top: 2%;
 }
-.productos{  
-    width: 20vw;
-    text-align: left;
-    background-color: white;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+.caja-txt{
+    width: 30vw;
+    height: 5vh;
+    border-radius: 7px;
+    border-color: transparent;
+    margin: 2%;
 }
-.con-descuento{
-    display: flex;
-    flex-direction: row;
-}
-.descuento{
-    color: #39b54a;
-    width: 90%; 
-}
-.precio{
-    margin-left: 2%;
-}
-.descripción{
-    margin-left: 2%;
-    display: none;
-    margin-bottom: 3%;
-}
-.verde{
-    color: #39b54a;
-    border: 1px #39b54a solid;
-    border-radius: 100px;
-    padding: 7px;
-    margin-left: 80%;
-    background-color: #fff;
-}
-#ofertas{
-    display: flex;
-    flex-direction: row;
-    margin-right: 7%;
-    margin-left: 7%;
-    margin-top: 5%;
-    padding-bottom: 7%;
-    justify-content: space-around;
-    height: 46vh;
+#enviar{
+    background-color: blue;
+    color: white;
 }
 
-.caja-producto:hover{
-    box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
-    transition: 0.5s;
-}
-.caja-producto-cambio:hover{
-    box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
-    transition: 0.5s;
-}
-.caja-producto:hover .descripción{
-    display: block;
-}
-.caja-producto-cambio:hover .descripción{
-    display: block;
-}
+
 
 /* FOOTER */
-
 #info{
     display: flex;
     flex-direction: row;
@@ -220,20 +156,21 @@ footer{
     color: #1259c3;
     size: 2em;
     margin: 10px;
-    margin-top: 10%;
-}
-.caja-info:hover .icono{
-    color: #39b54a;
 }
 
 
 /* MEDIA */
 
-
 @media (min-width: 360px) and (max-width:769px){
 
     /*HEADER*/
 
+    .usuario{
+        display: none;
+    }
+    .titulares{
+        display: none;
+    }
     #nav-bar{
         display: flex;
         flex-direction: row;
@@ -292,44 +229,14 @@ footer{
         margin-bottom: 5%;
         text-align: center;
     }
+        /* MAIN */
 
-    /* MAIN */
-   
-
-    .descripción{
-        display: block;
-    }
-    .usuario{
-        display: none;
-    }.titulares{
-        display: none;
-    }
-    #ultimas-vistas{
-        flex-direction: column;
-        height: 100%;
-    }
-    #ofertas{
-        flex-direction: column; 
-        height: 100%;
-    }
-    .foto-producto{
-        width: 85vw;
-    }
-    .productos{
-        width: 85vw;
-    }
-    .caja-producto{
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-    .caja-producto-cambio{
-        display: none;
-    }
-    .subtitulos{
-        text-align: center;
+    .caja-txt{
+        width: 70%;
     }
 
-    /* FOOTER */
+
+        /* FOOTER */
 
     #info{
         display: flex;
@@ -350,55 +257,14 @@ footer{
 
 
 @media (min-width: 770px) and (max-width:1079px){
-    main{
-        height: 100%;
+
+     /* MAIN */
+
+     .caja-txt{
+        width: 70%;
     }
-    .descripción{
-        display: block;
-    }  
-    .titulares{
-        font-size: 1.5vw;
-    }
-    .usuario{
-        font-size: 1.5vw;
-    }
-    .caja-producto{
-        box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
-        height: 100%;
-    }
-    .caja-producto-cambio{
-        display: none;
-    }
-    #opciones{
-        display: none;
-    }
-    #ultimas-vistas{
-        flex-direction: row;
-        height: 100%;
-    }
-    #ofertas{
-        flex-direction: row; 
-        padding-bottom: 20%;
-    }
-    #ultimas-vistas{
-        flex-wrap: wrap;
-    }
-    #ofertas{
-        flex-wrap: wrap;    
-    }
-    .foto-producto{
-        width: 40vw;
-    }
-    .productos{
-        width: 40vw;
-    }
-    .caja-producto{
-        margin: 1%;
-    }
-    .caja-producto-cambio{
-        margin: 1%;
-    }
-        /* FOOTER */
+
+     /*FOOTER*/
 
     #info{
         display: flex;
@@ -412,5 +278,7 @@ footer{
     }
     .informacion{
         width: 80vw;
-    }
+    }     
 }
+
+
