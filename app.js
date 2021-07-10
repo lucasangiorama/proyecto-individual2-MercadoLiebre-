@@ -8,8 +8,8 @@ const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
 
-const publicPath = path.resolve(__dirname, "./views");
-app.use(express.static(publicPath2));
+const publicPath2 = path.resolve(__dirname, "./views");
+app.use(express.static(publicPath));
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/home.html"));
